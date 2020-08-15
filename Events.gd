@@ -3,5 +3,5 @@ extends Node
 
 
 signal allotted_changed(value)
-signal race_changed(natural_talent)
+signal race_changed(natural_talents)
 signal points_changed(attribute, points)

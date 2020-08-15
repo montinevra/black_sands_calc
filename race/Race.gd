@@ -81,6 +81,11 @@ const natural_talents = {
 onready var m_menu = $OptionButton
 
 
+func set_race(t_new_race):
+	m_menu.select(t_new_race)
+	_on_OptionButton_item_selected(t_new_race)
+
+
 func _on_OptionButton_item_selected(index):
 	var race = m_menu.get_item_text(index)
 	var natural = natural_talents[race]
