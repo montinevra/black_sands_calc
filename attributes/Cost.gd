@@ -1,5 +1,5 @@
 # Input for miscellaneous costs (background packages, (dis)advantages, etc.)
-extends "Attribute.gd"
+extends "PointsInput.gd"
 
 
 enum Mode{COST = 1, CREDIT = -1}
