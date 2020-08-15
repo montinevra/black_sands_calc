@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://race/Race.gd" type="Script" id=1]
+
+[node name="Race" type="Label"]
+margin_right = 30.0
+margin_bottom = 14.0
+text = "Race"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionButton" type="OptionButton" parent="."]
+margin_left = 64.0
+margin_right = 208.0
+margin_bottom = 20.0
+text = "Gyrstall"
+items = [ "Gyrstall", null, false, 0, null, "Harnwulf", null, false, 1, null, "Seledhior", null, false, 2, null, "Iktani", null, false, 3, null, "Coast Vulture", null, false, 4, null, "Dustcropper", null, false, 5, null, "Ice Stalker", null, false, 6, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+[connection signal="item_selected" from="OptionButton" to="." method="_on_OptionButton_item_selected"]

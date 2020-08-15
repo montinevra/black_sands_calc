@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://attributes/Skill.gd" type="Script" id=1]
+
+[node name="Skill" type="Label"]
+margin_right = 128.0
+margin_bottom = 31.0
+text = "Skill"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "Edit label text to assign a unique talent or skill name"
+}
+
+[node name="Rank" type="SpinBox" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 31.861
+margin_right = 105.861
+margin_bottom = 24.0
+max_value = 5.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Points" type="SpinBox" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 112.0
+margin_right = 186.0
+margin_bottom = 24.0
+max_value = 30.0
+editable = false
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BackgroundBonus" type="SpinBox" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 192.0
+margin_right = 266.0
+margin_bottom = 24.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="value_changed" from="Rank" to="." method="_on_Rank_value_changed"]
+[connection signal="value_changed" from="Points" to="." method="_on_Points_value_changed"]
+[connection signal="value_changed" from="BackgroundBonus" to="." method="_on_BackgroundBonus_value_changed"]

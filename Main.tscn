@@ -1,0 +1,335 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://race/Race.tscn" type="PackedScene" id=1]
+[ext_resource path="res://attributes/Talent.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+[ext_resource path="res://points/Available.tscn" type="PackedScene" id=4]
+[ext_resource path="res://points/Allotted.tscn" type="PackedScene" id=5]
+[ext_resource path="res://attributes/Skill.tscn" type="PackedScene" id=6]
+[ext_resource path="res://attributes/Cost.tscn" type="PackedScene" id=7]
+
+[node name="Main" type="Control"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 16.0
+margin_bottom = 16.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Points" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Allotted" parent="Points" instance=ExtResource( 5 )]
+margin_right = 99.0
+
+[node name="Available" parent="Points" instance=ExtResource( 4 )]
+margin_top = 64.0
+margin_right = 106.0
+margin_bottom = 78.0
+
+[node name="Race" parent="." instance=ExtResource( 1 )]
+margin_left = 232.0
+margin_right = 262.0
+
+[node name="Talents" type="Label" parent="."]
+margin_top = 128.0
+margin_right = 46.0
+margin_bottom = 168.0
+text = "Talents"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RanksLabel" type="Label" parent="Talents"]
+margin_left = 104.0
+margin_top = 32.0
+margin_right = 144.0
+margin_bottom = 46.0
+text = "Ranks"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="PointsLabel" type="Label" parent="Talents"]
+margin_left = 192.0
+margin_top = 32.0
+margin_right = 232.0
+margin_bottom = 46.0
+text = "Points"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Force" parent="Talents" instance=ExtResource( 2 )]
+margin_top = 72.0
+margin_bottom = 103.0
+text = "Force"
+
+[node name="Quickness" parent="Talents" instance=ExtResource( 2 )]
+margin_top = 112.0
+margin_bottom = 143.0
+text = "Quickness"
+
+[node name="Dexterity" parent="Talents" instance=ExtResource( 2 )]
+margin_top = 152.0
+margin_bottom = 183.0
+text = "Dexterity"
+
+[node name="Toughness" parent="Talents" instance=ExtResource( 2 )]
+margin_top = 192.0
+margin_bottom = 223.0
+text = "Toughness"
+
+[node name="Charisma" parent="Talents" instance=ExtResource( 2 )]
+margin_top = 232.0
+margin_bottom = 263.0
+text = "Charisma"
+
+[node name="Perception" parent="Talents" instance=ExtResource( 2 )]
+margin_top = 272.0
+margin_bottom = 303.0
+text = "Perception"
+
+[node name="Intelligence" parent="Talents" instance=ExtResource( 2 )]
+margin_top = 312.0
+margin_bottom = 343.0
+text = "Intelligence"
+
+[node name="Moxy" parent="Talents" instance=ExtResource( 2 )]
+margin_top = 352.0
+margin_bottom = 383.0
+text = "Moxy"
+
+[node name="Skills" type="Label" parent="."]
+margin_left = 336.0
+margin_top = 128.0
+margin_right = 376.0
+margin_bottom = 168.0
+text = "Skills"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Labels" type="Control" parent="Skills"]
+margin_left = 112.0
+margin_top = 8.0
+margin_right = 152.0
+margin_bottom = 48.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RanksLabel2" type="Label" parent="Skills/Labels"]
+margin_left = 48.0
+margin_top = 24.0
+margin_right = 88.0
+margin_bottom = 38.0
+text = "Ranks"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="PointsLabel2" type="Label" parent="Skills/Labels"]
+margin_left = 128.0
+margin_top = 24.0
+margin_right = 168.0
+margin_bottom = 38.0
+text = "Points"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BonusLabel2" type="Label" parent="Skills/Labels"]
+margin_left = 208.0
+margin_top = 24.0
+margin_right = 286.0
+margin_bottom = 55.0
+text = "Background 
+Bonus"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="RanksLabel3" type="Label" parent="Skills/Labels"]
+margin_left = 488.0
+margin_top = 24.0
+margin_right = 528.0
+margin_bottom = 38.0
+text = "Ranks"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="PointsLabel3" type="Label" parent="Skills/Labels"]
+margin_left = 568.0
+margin_top = 24.0
+margin_right = 608.0
+margin_bottom = 38.0
+text = "Points"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BonusLabel3" type="Label" parent="Skills/Labels"]
+margin_left = 648.0
+margin_top = 24.0
+margin_right = 726.0
+margin_bottom = 55.0
+text = "Background 
+Bonus"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Melee Combat" parent="Skills" instance=ExtResource( 6 )]
+margin_top = 72.0
+margin_bottom = 103.0
+text = "Melee Combat"
+
+[node name="Projectile Weapons" parent="Skills" instance=ExtResource( 6 )]
+margin_top = 112.0
+margin_bottom = 143.0
+text = "Projectile Weapons"
+
+[node name="Firearms" parent="Skills" instance=ExtResource( 6 )]
+margin_top = 152.0
+margin_bottom = 183.0
+text = "Firearms"
+
+[node name="Warfare" parent="Skills" instance=ExtResource( 6 )]
+margin_top = 192.0
+margin_bottom = 223.0
+text = "Warfare"
+
+[node name="Athletics" parent="Skills" instance=ExtResource( 6 )]
+margin_top = 232.0
+margin_bottom = 263.0
+text = "Athletics"
+
+[node name="Tenacity" parent="Skills" instance=ExtResource( 6 )]
+margin_top = 272.0
+margin_bottom = 303.0
+text = "Tenacity"
+
+[node name="Stealth" parent="Skills" instance=ExtResource( 6 )]
+margin_top = 312.0
+margin_bottom = 343.0
+text = "Stealth"
+
+[node name="Investigation" parent="Skills" instance=ExtResource( 6 )]
+margin_top = 352.0
+margin_bottom = 383.0
+text = "Investigation"
+
+[node name="Conveyance" parent="Skills" instance=ExtResource( 6 )]
+margin_top = 392.0
+margin_bottom = 423.0
+text = "Conveyance"
+
+[node name="Survival" parent="Skills" instance=ExtResource( 6 )]
+margin_top = 432.0
+margin_bottom = 463.0
+text = "Survival"
+
+[node name="Tradesman" parent="Skills" instance=ExtResource( 6 )]
+margin_left = 440.0
+margin_top = 72.0
+margin_right = 568.0
+margin_bottom = 103.0
+text = "Tradesman"
+
+[node name="Deception" parent="Skills" instance=ExtResource( 6 )]
+margin_left = 440.0
+margin_top = 112.0
+margin_right = 568.0
+margin_bottom = 143.0
+text = "Deception"
+
+[node name="Inspiration" parent="Skills" instance=ExtResource( 6 )]
+margin_left = 440.0
+margin_top = 152.0
+margin_right = 568.0
+margin_bottom = 183.0
+text = "Inspiration"
+
+[node name="Intimidation" parent="Skills" instance=ExtResource( 6 )]
+margin_left = 440.0
+margin_top = 192.0
+margin_right = 568.0
+margin_bottom = 223.0
+text = "Intimidation"
+
+[node name="Influence" parent="Skills" instance=ExtResource( 6 )]
+margin_left = 440.0
+margin_top = 232.0
+margin_right = 568.0
+margin_bottom = 263.0
+text = "Influence"
+
+[node name="Academia" parent="Skills" instance=ExtResource( 6 )]
+margin_left = 440.0
+margin_top = 272.0
+margin_right = 568.0
+margin_bottom = 303.0
+text = "Academia"
+
+[node name="Medical" parent="Skills" instance=ExtResource( 6 )]
+margin_left = 440.0
+margin_top = 312.0
+margin_right = 568.0
+margin_bottom = 343.0
+text = "Medical"
+
+[node name="Esoterics" parent="Skills" instance=ExtResource( 6 )]
+margin_left = 440.0
+margin_top = 352.0
+margin_right = 568.0
+margin_bottom = 383.0
+text = "Esoterics"
+
+[node name="Attunement" parent="Skills" instance=ExtResource( 6 )]
+margin_left = 440.0
+margin_top = 392.0
+margin_right = 568.0
+margin_bottom = 423.0
+text = "Attunement"
+
+[node name="Misc Costs" type="Control" parent="."]
+margin_left = 496.0
+margin_right = 536.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" parent="Misc Costs" instance=ExtResource( 7 )]
+text = "Background Cost:"
+
+[node name="Advantage" parent="Misc Costs" instance=ExtResource( 7 )]
+margin_top = 40.0
+margin_bottom = 54.0
+text = "Advantage Cost:"
+
+[node name="Disadvantage" parent="Misc Costs" instance=ExtResource( 7 )]
+margin_top = 80.0
+margin_bottom = 94.0
+text = "Disadvantage Credit:"
+mode = -1
