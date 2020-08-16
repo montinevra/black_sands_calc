@@ -336,7 +336,6 @@ text = "Disadvantage Credit:"
 mode = -1
 
 [node name="Floating" parent="." instance=ExtResource( 8 )]
-margin_left = 8.0
-margin_top = 552.0
-margin_right = 112.0
-margin_bottom = 566.0
+margin_top = 544.0
+margin_right = 104.0
+margin_bottom = 558.0
