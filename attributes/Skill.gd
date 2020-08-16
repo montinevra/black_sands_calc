@@ -5,13 +5,10 @@ extends "Attribute.gd"
 onready var m_bonus = $BackgroundBonus
 
 
-func _on_Rank_value_changed(value):
-	m_points.value = value + pow(value, 2) - m_bonus.value
-
-
-func _on_Points_value_changed(value):
-	._on_Points_value_changed(value)
-
-
-func _on_BackgroundBonus_value_changed(value):
-	m_points.value = m_rank.value + pow(m_rank.value, 2) - value
+func _on_points_changed(value):
+	var points = m_rank.value + pow(m_rank.value, 2) - m_bonus.value
+	
+	if points < 0:
+		points = 0
+	m_points.text = String(points)
+	._on_Points_value_changed(points)

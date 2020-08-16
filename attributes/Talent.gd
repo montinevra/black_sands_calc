@@ -15,11 +15,14 @@ func _ready():
 
 func _on_Rank_value_changed(value):
 	var baseline = value - m_natural
+	var points
 	
 	if baseline < 0:
-		m_points.value = baseline * 5
+		points = baseline * 5
 	else:
-		m_points.value = _get_rank_cost(value)
+		points = _get_rank_cost(value)
+	m_points.text = String(points)
+	_on_Points_value_changed(points)
 
 
 func _on_Points_value_changed(value):

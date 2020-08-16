@@ -21,23 +21,22 @@ margin_bottom = 24.0
 min_value = 2.0
 max_value = 10.0
 value = 5.0
+align = 2
 __meta__ = {
 "_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="Points" type="SpinBox" parent="."]
+[node name="Points" type="Label" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = 112.0
-margin_right = 186.0
+margin_right = 152.0
 margin_bottom = 24.0
-min_value = -15.0
-max_value = 200.0
-editable = false
+text = "0"
+align = 2
+valign = 1
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 [connection signal="value_changed" from="Rank" to="." method="_on_Rank_value_changed"]
-[connection signal="value_changed" from="Points" to="." method="_on_Points_value_changed"]
