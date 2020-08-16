@@ -2,7 +2,6 @@
 extends Node
 
 
-#todo: floating talent points
 const natural_talents = {
 	"Gyrstall": {
 		"Force": 5, 

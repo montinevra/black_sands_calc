@@ -33,7 +33,7 @@ margin_left = 112.0
 margin_right = 186.0
 margin_bottom = 24.0
 min_value = -15.0
-max_value = 130.0
+max_value = 200.0
 editable = false
 __meta__ = {
 "_edit_lock_": true,

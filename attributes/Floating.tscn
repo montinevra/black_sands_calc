@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://attributes/Floating.gd" type="Script" id=1]
+
+[node name="Floating" type="Label"]
+text = "Floating Talents:"
+script = ExtResource( 1 )
+
+[node name="OptionButton1" type="OptionButton" parent="."]
+margin_left = 128.0
+margin_right = 248.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionButton2" type="OptionButton" parent="."]
+margin_left = 128.0
+margin_top = 32.0
+margin_right = 248.0
+margin_bottom = 52.0
+[connection signal="item_selected" from="OptionButton1" to="." method="_on_OptionButton1_item_selected"]
+[connection signal="item_selected" from="OptionButton2" to="." method="_on_OptionButton2_item_selected"]
